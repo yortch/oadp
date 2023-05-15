@@ -66,7 +66,7 @@ spec:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
           claimName: wp-pv-claim
-      securityContext: # This is what wglambert referring to 
-        sysctls:               # Will add a sysctl in variable to your container
-        - name: net.ipv4.ip_unprivileged_port_start   # You will modify the this parameter 
+      securityContext:  
+        sysctls:               # adds a sysctl in variable to your container
+        - name: net.ipv4.ip_unprivileged_port_start
           value: "0"            
